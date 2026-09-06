@@ -3,6 +3,7 @@ public:
     bool containsDuplicate(vector<int>& nums) {
         int n = nums.size();
         unordered_set<int> st;
+        sort(nums.begin(), nums.end());
         for(int x :nums){
             st.insert(x);
         
