@@ -17,8 +17,9 @@ public:
         int sum=0;
         if(root->left!=NULL && root->left->left==NULL && root->left->right==NULL)
             sum=+root->left->val;
-        sum+=sumOfLeftLeaves(root->left);
-        sum+=sumOfLeftLeaves(root->right);
-        return sum;
+        int total=0;
+        total+=sumOfLeftLeaves(root->left);
+        total+=sumOfLeftLeaves(root->right);
+        return sum+total;
     }
 };
