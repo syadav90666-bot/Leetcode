@@ -10,8 +10,7 @@ public:
         m1[a]=b;
         m2[b]=a;
         }
-        if(m1.size()==m2.size())
-            return true;
-        return false;
+        
+        return true;
     }
 };
