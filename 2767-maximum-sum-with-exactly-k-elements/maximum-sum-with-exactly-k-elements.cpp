@@ -3,13 +3,13 @@ public:
     int maximizeSum(vector<int>& nums, int k) {
         int ans =0;
         int max =INT_MIN;
-           int m = *max_element(nums.begin(),nums.end());
-        while(k--){
-           
-            ans+=m;
-            m++;
-            
-        }
+           for(int i=0;i<nums.size();i++){
+            if(max<nums[i]) max=nums[i];
+           }
+       for(int i=0;i<k;i++){
+        ans+=max;
+        max++;
+       }
 return ans;
     }
 };
